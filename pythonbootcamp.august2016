@@ -1,0 +1,38 @@
+---
+layout: default
+title: Python Bootcamp - August 2016
+---
+
+<h1>August 2016</h1>
+
+<h2>Lecture Schedule</h2>
+
+<p>
+  Topics link to slides, where available.
+</p>
+
+<p>ITCS means <a href="http://interactivepython.org/runestone/static/thinkcspy/toc.html">Interactive Think CS Textbook</a> - awesome resource!</p>
+<p>IP means <a href="http://shop.oreilly.com/product/0636920028659.do">Introducting Python</a></p>
+<p>TP means Think Python, 2nd Edition, by Allen B. Downey, O'Reilly Media, December 2015. Available free at <a href="http://greenteapress.com/wp/think-python-2e/">http://greenteapress.com/wp/think-python-2e/</a> and from O'Reilly at <a href="http://shop.oreilly.com/product/0636920045267.do">http://shop.oreilly.com/product/0636920045267.do</a></p>
+
+BEGIN_SCHEDULE
+Day 1: 2016-08-15
+Hour 1; intro-python
+Hour 2; values-variables
+Hour 3; data-structures
+Day 2: 2016-08-16
+Hour 1; functions
+Hour 2; control-structures
+Hour 3; modules-programs
+Day 3: 2016-08-17
+Hour 1; data-representation
+Hour 2; functools
+Hour 3; classes-objects
+Day 4: 2016-08-18
+Hour 1; ipython-notebooks
+Hour 2; file-io
+Hour 3; csv-files
+Day 5: 2016-08-19
+Hour 1; text-manipulation
+Hour 2; web-services
+Hour 3; Next Steps
