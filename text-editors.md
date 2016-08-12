@@ -5,9 +5,7 @@ title: Text Editors
 
 # Introduction to Text Editors for Young Programmers
 
-![http://xkcd.com/208/](http://imgs.xkcd.com/comics/regular_expressions.png)
-
-Text is the raw material of the craft of programming.  You should become good at manipulating text.  The first thing you should do is pick a good cross-platform text editor and learn it well.  If you haven't already done so, this guide will help you choose one.  The next thing you should do is learn regular expressions, and the next thing after that is learn UNIX and one of its command shells, probably bash.</p>
+Text is the raw material of the craft of programming.  You should become good at manipulating text.  The first thing you should do is pick a good cross-platform text editor and learn it well.  If you haven't already done so, this guide will help you choose one.  The next thing you should do is learn regular expressions, and the next thing after that is learn UNIX and one of its command shells, probably bash.
 
 ## Choosing a text editor
 
@@ -18,9 +16,9 @@ I used [Emacs](http://www.gnu.org/software/emacs/) for years, then tried [Sublim
 
 Many people who insist on using Windows like [Notepad++](http://notepad-plus-plus.org/), but [Atom](https://atom.io/) and [Sublime Text](http://www.sublimetext.com/) are much better. If you are a computer science major you will use Unix during your studies, and if you're currently a Windows user you will almost certainly switch to a Unix (like Linux or Mac OS X) for your personal computing after learning more about computing.  So get in the habit of strongly preferring cross-platform software and open standards. (You should never use Microsoft Office, for example, because doing so locks *your* data in a data format owned by someone else and greatly reduces your flexibility. You will gain an appreciation for the power of plain text in this class.)
 
-If you're going to get a computer science or engineering degree, you should learn [Emacs](http://www.gnu.org/software/emacs/) or [Vim](http://www.vim.org/), because they can be used in a terminal and are available on every UNIX platform, Windows, and Mac. Objectively, [Emacs](http://www.gnu.org/software/emacs/) is the most powerful editor in existence, but it has a steep learning curve.
+If you're going to get a computer science or engineering degree, you should learn [Emacs](http://www.gnu.org/software/emacs/) or [Vim](http://www.vim.org/), because they can be used in a terminal and are available on every UNIX platform, Windows, and Mac. [Emacs](http://www.gnu.org/software/emacs/) is the most powerful editor in existence, but it has a steep learning curve.
 
-**Recommendation for new programmers**: [Sublime Text](http://www.sublimetext.com/)
+### **Recommendation for new programmers**: [Sublime Text](http://www.sublimetext.com/)
 
 ## TABS Versus Spaces
 
@@ -28,7 +26,7 @@ Never use TABs in source code.  Always indent with spaces.  The traditional mean
 
 ## Customizing your text editor
 
-Having a go-to text editor improves your productivity in part because it will be set up with your preferred defaults.  Customization is important because many text editors and IDEs are configured with bad defaults.  Good programmers insist on writing code that is clear and consistently formatted.  Having a well-configured text editor helps you do that. At a minimum you should configure your text editor to:
+Having a go-to text editor improves your productivity in part because you can set up your editor with your preferred defaults.  Customization is important because many text editors and IDEs are configured with bad defaults.  Good programmers insist on writing code that is clear and consistently formatted.  Having a well-configured text editor helps you do that. At a minimum you should configure your text editor to:
 
 - Indent with spaces instead of TABs
 - Set indent (tab) width to 4
@@ -44,7 +42,20 @@ We suggest that you also:
 - Bind a key to "go to" a specified line number
 
 
-### Emacs
+### Customizing Sublime Text
+
+TODO: exapand
+
+```sh
+{
+    "tab_size": 4,
+    "translate_tabs_to_spaces": true,
+    "rulers": [80],
+    "trim_trailing_white_space_on_save": true
+}
+```
+
+### Customizing Emacs
 
 My [dotfiles](https://github.com/csimpkins/dotfiles) will give you a big head start on your Emacs configuration and your general Mac OS X and Ubuntu Linux configuration. If you're new to Emacs and don't want to bother with a more complex Emacs configuration, put the folloiwng in your `.emacs` or `~/.emacs.d/init.el`.
 
@@ -107,18 +118,7 @@ My [dotfiles](https://github.com/csimpkins/dotfiles) will give you a big head st
 (add-to-list 'default-frame-alist '(width . 88))
 ```
 
-### Sublime Text
-
-```sh
-{
-    "tab_size": 4,
-    "translate_tabs_to_spaces": true,
-    "rulers": [80],
-    "trim_trailing_white_space_on_save": true
-}
-```
-
-### Atom
+### Customizing Atom
 
 First, be sure to familiarize yourself with basic Atom usage.  The [Getting Started](https://atom.io/docs/v0.124.0/getting-started) guide is enough to make you quite proficient.
 In Atom Preferences, make sure the following are checked:
