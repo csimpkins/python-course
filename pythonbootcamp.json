@@ -10,6 +10,11 @@
         "readings": ["<a href=\"http://interactivepython.org/runestone/static/thinkcspy/SimplePythonData/simpledata.html\">ITCS - Simple Data</a>", "IP 2"],
         "resources": [""]
     },
+    "strings": {
+        "topic": "<a href=\"slides/strings.html\">Strings</a>",
+        "readings": ["<a href=\"http://interactivepython.org/runestone/static/thinkcspy/SimplePythonData/simpledata.html\">ITCS - Simple Data</a>", "IP 2"],
+        "resources": [""]
+    },
     "data-structures": {
         "topic": "<a href=\"slides/data-structures.html\">Data Structures</a>",
         "readings": ["<a href=\"http://interactivepython.org/runestone/static/thinkcspy/Lists/lists.html\">ITCS - Lists</a>", "<a href=\"http://interactivepython.org/runestone/static/thinkcspy/Dictionaries/dictionaries.html\">ITCS - Dictionaries</a>", "IP 2-3"],
@@ -106,8 +111,8 @@
         "readings": ["IP 9", "<a href=\"http://flask.pocoo.org/\">Flask Web site</a>"],
         "resources": ["<a href=\"code/web/gradebook.zip\">Gradeboook App</a>"]
     },
-    "text-manipulation": {
-        "topic": "<a href=\"slides/text-manipulation.html\">Text Manipulation</a>",
+    "regular-expressions": {
+        "topic": "<a href=\"slides/regular-expressions.html\">Regular Expressions</a>",
         "readings": ["IP 7", "<a href=\"https://docs.python.org/3/library/re.html\">Python RE Module</a>", "<a href=\"https://docs.python.org/3/howto/regex.html\">Python Regex HowTo</a>"],
         "resources": [""]
     },

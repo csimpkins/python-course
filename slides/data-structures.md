@@ -22,13 +22,10 @@ A list is an indexed sequence of Python objects.
 >>> boys = [’Stan’, ’Kyle’, ’Cartman’, ’Kenny’]
 ```
 
-- Create an empty list with empty square brackets or list() function
+- Create an empty list with empty square brackets or `list()` function
 
 ```Python
 >>> empty = []
-```
-
-```Python
 >>> leer = list()
 ```
 
@@ -55,7 +52,7 @@ can mix element types
 [’90,’, ’85,’, ’92,’, ’100’]
 ```
 
-- Note that by default, `split()` uses whitespace to delimit
+- By default `split()` uses whitespace to delimit
 elements. To use a different delimiter, pass as argument to
 `split()`:
 
@@ -104,7 +101,7 @@ elements
 
 # List Operators
 
-The in operator tests for list membership. Can be negated with
+The `in` operator tests for list membership. Can be negated with
 not:
 
 ```Python
@@ -152,21 +149,20 @@ greatest
 ’Stan’
 ```
 
-# The 'del` Statement
+# The `del` Statement
 
-Python includes a del statement that deletes variables.
+The `del` statement deletes variables.
 
 - Each element of a list is a variable whose name is formed by
 indexing into the list with square brackets.
 
 ```Python
->>> boys
-[’Stan’, ’Kyle’, ’Cartman’, ’Kenny’]
+>>> boys = [’Stan’, ’Kyle’, ’Cartman’, ’Kenny’]
 >>> boys[3]
 ’Kenny’
 ```
 
-- Like any variable, a list element can be deleted with del
+- Like any variable, a list element can be deleted with `del`
 
 ```Python
 >>> del boys[3]
@@ -174,7 +170,7 @@ indexing into the list with square brackets.
 [’Stan’, ’Kyle’, ’Cartman’] # You killed Kenny!
 ```
 
-- Since a list variable is a variable, you can delete the whole list
+- A list variable is a variable, so you can delete the whole list
 
 ```Python
 >>> del boys
@@ -212,8 +208,8 @@ s.extend(t) adds the elements of t to the end of s
 
 # List Methods
 
-- s.remove(x) removes the first occurrence of x in s, or raises a
-ValueError if x is not in s
+- `s.remove(x)` removes the first occurrence of `x` in `s`, or raises a
+`ValueError` if `x` is not in `s`
 
 ```Python
 >>> boys.remove(’Kenny’)
@@ -225,7 +221,7 @@ File "<stdin>", line 1, in <module>
 ValueError: list.remove(x): x not in list
 ```
 
-- s.pop() removes and returns the last element of the list
+- `s.pop()` removes and returns the last element of the list
 
 ```Python
 >>> boys.pop()
@@ -241,8 +237,7 @@ Slicing lists works just like slicing strings (they’re both sequences)
 - Take the first two elements:
 
 ```Python
->>> boys
-[’Stan’, ’Kyle’, ’Cartman’, ’Butters’, ’Tweak’]
+>>> boys = [’Stan’, ’Kyle’, ’Cartman’, ’Butters’, ’Tweak’]
 >>> boys[0:2]
 [’Stan’, ’Kyle’]
 ```
@@ -258,10 +253,12 @@ Slicing lists works just like slicing strings (they’re both sequences)
 
 - Take the second from the end:
 
+```Python
 >>> boys[-2]
 ’Butters’
+```
 
-Note that slice operations return new lists. Let’s see what this means ...
+Note that slice operations return new lists.
 
 # Aliases
 
@@ -275,6 +272,7 @@ Aliasing occurs when two or more variables reference the same object
 [’Stan’, ’Kyle’, ’Cartman’, ’Butters’, ’Tweak’]
 >>> brats
 [’Stan’, ’Kyle’, ’Cartman’, ’Butters’, ’Tweak’]
+```
 
 Now boys and brats are aliases.
 
@@ -291,9 +289,7 @@ the same object
 
 # Copies
 
-Operators create copies.
-
-- Creating new lists with operators doesn’t modify original list
+Operators create copies
 
 ```Python
 >>> brats + [’Bebe’, ’Wendy’]
@@ -303,7 +299,7 @@ Operators create copies.
 [’Stan’, ’Kyle’, ’Cartman’, ’Butters’, ’Tweak’, ’Timmy’]
 ```
 
-- You have to reassign to the list to make an update:
+You have to reassign to the list to make an update:
 
 ```Python
 >>> brats = brats + [’Bebe’, ’Wendy’] # could also use shortcut +=
@@ -312,7 +308,7 @@ Operators create copies.
 ’Wendy’]
 ```
 
-- Notice that after the reassignment, `brats` is no longer an alias of
+Notice that after the reassignment, `brats` is no longer an alias of
 `boys`
 
 ```Python
@@ -354,10 +350,7 @@ You can combine the elements of a list to form a string with `str`’s
 >>> "-".join(aretha)
 ’R-E-S-P-E-C-T’
 ```
-
-Sort a list with general `sorted()` function, or `list`’s `sort()` method.
-
-- `sorted()` function returns a new list
+`sorted()` function returns a new list
 
 ```Python
 >>> sorted(aretha)
@@ -366,7 +359,7 @@ Sort a list with general `sorted()` function, or `list`’s `sort()` method.
 [’R’, ’E’, ’S’, ’P’, ’E’, ’C’, ’T’]
 ```
 
-- `sort()` method modifies the list it is invoked on
+`sort()` method modifies the list it is invoked on
 
 ```Python
 >>> aretha.sort()
@@ -376,7 +369,7 @@ Sort a list with general `sorted()` function, or `list`’s `sort()` method.
 
 # Example: Grades
 
-- Start with a list representing a line from a gradebook file (sort of)
+Start with a list representing a line from a gradebook file
 
 ```Python
 >>> grades_line = [’Chris’, 100, 90, 95]
@@ -384,7 +377,7 @@ Sort a list with general `sorted()` function, or `list`’s `sort()` method.
 [’Chris’, 100, 90, 95]
 ```
 
-- We can get the sublist containing just the grades witha slice
+Get the sublist containing just the grades by slicing
 
 ```Python
 >>> grades = grades_line[1:]
@@ -392,9 +385,9 @@ Sort a list with general `sorted()` function, or `list`’s `sort()` method.
 [100, 90, 95]
 ```
 
-- Sum the grades using Python’s built-in sum(s) function
+Sum the grades using Python’s built-in `sum()` function
 
-``Python
+```Python
 >>> sum(grades)
 285
 ```
@@ -405,9 +398,6 @@ Sort a list with general `sorted()` function, or `list`’s `sort()` method.
 >>> sum(grades) / len(grades)
 95.0
 ```
-
-This is a small taste of the expressive power and syntactic
-convenience of Python’s data structures.
 
 # Tuples
 
@@ -420,7 +410,7 @@ Tuples are created by separating objects with commas
 (1, 2)
 ```
 
-- Tuples can be used in assignments to "unpack" a sequence
+Tuples can be used in assignments to "unpack" a sequence
 
 ```Python
 >>> a, b = [1, 2]
@@ -430,7 +420,7 @@ Tuples are created by separating objects with commas
 2
 ```
 
-- Tuple assignment can be used to swap values
+Tuple assignment can be used to swap values
 
 ```Python
 >>> b, a = a, b
@@ -442,13 +432,13 @@ Tuples are created by separating objects with commas
 
 A dictionary is a map from keys to values.
 
-- Create dictionaries with `{}`
+Create dictionaries with `{}`
 
 ```Python
 >>> capitals = {}
 ```
 
-- Add key-value pairs with assignment operator
+Add key-value pairs with assignment operator
 
 ```Python
 >>> capitals[’Georgia’] = ’Atlanta’
@@ -457,7 +447,7 @@ A dictionary is a map from keys to values.
 {’Georgia’: ’Altanta’, ’Alabama’: ’Montgomery’}
 ```
 
-- Keys are unique, so assignment to same key updates mapping
+Keys are unique, so assignment to same key updates mapping
 
 ```Python
 >>> capitals[’Alabama’] = ’Birmingham’
@@ -467,7 +457,7 @@ A dictionary is a map from keys to values.
 
 # Dictionary Operations
 
-- Remove a key-value mapping with `del` statement
+Remove a key-value mapping with `del` statement
 
 ```Python
 >>> del capitals[’Alabama’]
@@ -475,7 +465,7 @@ A dictionary is a map from keys to values.
 {’Georgia’: ’Atlanta’}
 ```
 
-- Use the `in` operator to test for existence of key (not value)
+Use the `in` operator to test for existence of key (not value)
 
 ```Python
 >>> ’Georgia’ in capitals
@@ -484,7 +474,7 @@ True
 False
 ```
 
-- Extend a dictionary with `update()` method, get values as a list
+Extend a dictionary with `update()` method, get values as a list
 with values method
 
 ```Python
@@ -498,14 +488,14 @@ dict_values([’Jackson’, ’Nashville’, ’Atlanta’])
 
 Any sequence of two-element sequences can be converted to a `dict`
 
-- A list of two-element lists
+A list of two-element lists:
 
 ```Python
 >>> dict([[1, 1], [2, 4], [3, 9], [4, 16]])
 {1: 1, 2: 4, 3: 9, 4: 16}
 ```
 
-- A list of two-element tuples
+A list of two-element tuples:
 
 
 ```Python
@@ -514,7 +504,7 @@ Shepherd’)])
 {’Rin Tin Tin’: ’German Shepherd’, ’Lassie’: ’Collie’}
 ```
 
-- Even a list of two-character strings
+Even a list of two-character strings:
 
 ```Python
 >>> dict([’a1’, ’a2’, ’b3’, ’b4’])
@@ -549,7 +539,7 @@ over (we’ll learn that later) but can’t be accessed by index.
 
 # Set Operations
 
-- Intersection (elements in `a` *and* `b`)
+Intersection (elements in `a` *and* `b`)
 
 ```Python
 >>> a = {1, 2}
@@ -558,21 +548,23 @@ over (we’ll learn that later) but can’t be accessed by index.
 {2}
 ```
 
-- Union (elements in `a` *or* `b`)
+Union (elements in `a` *or* `b`)
 
 ```Python
 >>> a | b # or a.union(b)
 {1, 2, 3}
 ```
 
-- Difference (elements in `a` that are not in `b`)
+# Set Operations
+
+Difference (elements in `a` that are not in `b`)
 
 ```Python
 >>> a - b # or a.difference(b)
 {1}
 ```
 
-- Symmetric difference, *exclusive or*) (elements in `a` or `b` but not both)
+Symmetric difference (elements in `a` or `b` but not both)
 
 ```Python
 >>> a ^ b # or a.symmetric_difference(b)
@@ -583,28 +575,30 @@ over (we’ll learn that later) but can’t be accessed by index.
 
 A predicate function asks a question with a `True` or `False` answer.
 
-- Subset of
+Subset of:
 
 ```Python
 >>>a <= b # or a.issubset(b)
 False
 ```
 
-- Proper subset of
+Proper subset of:
 
 ```Python
 >>> a < b
 False
 ```
 
-- Superset of
+# Set Predicates
+
+Superset of:
 
 ```Python
 >>> a >= b # or a.issuperset(b)
 False
 ```
 
-- Proper superset of
+Proper superset of:
 
 ```Python
 >>> a > b
@@ -618,3 +612,7 @@ Typical Python programs make extensive use of built-in data structures and often
 - These are just the basics
 - Explore these data structures on your own
 - Read the books and Python documentation
+
+
+This is a small taste of the expressive power and syntactic
+convenience of Python’s data structures.

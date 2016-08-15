@@ -50,7 +50,7 @@ Some operators are overloaded, meaning they have different meanings when applied
 'Yolo!'
 ```
 
-`*` multiplication for numbers and repetition for strings:
+`*` means multiplication for numbers and repetition for strings:
 
 ```python
 >>> 2 * 3
@@ -97,10 +97,7 @@ A variable is a name for a value. You bind a value to a variable using an assign
 'Ok'
 ```
 
-We say "a gets the value 'OK'".
-
-`=` is the assignment operator and an assignment statement has the
-form *<variable_name> = <expression>*
+`=` is the assignment operator and an assignment statement has the form `<variable_name> = <expression>`
 
 Variable names, or identifiers, may contain letters, numbers, or underscores and may not begin with a number.
 
@@ -154,7 +151,7 @@ Python evaluates the expression on the right-hand side, then binds the expressio
 
 Note that the value of `a` used in the expression on the right hand side is the value it had before the assignment statement.
 
-What's the type of a?
+What's the type of `a`?
 
 # Type Conversions
 
@@ -207,6 +204,9 @@ Note that the REPL echoes the value with a \n to represent the newline character
 I do HTML for them all,
 even made a home page for my dog.
 ```
+
+# Strings
+
 Choice of quote character is usually a matter of taste, but the choice can sometimes buy convenience. If your string contains a quote character you can either escape it:
 
 ```Python
@@ -221,7 +221,7 @@ or use the other quote character:
 
 # String Operations
 
-Because strings are sequences we can get a string's length with len():
+Because strings are sequences we can get a string's length with `len()`:
 
 ```Python
 >>> i = "team"
@@ -229,7 +229,7 @@ Because strings are sequences we can get a string's length with len():
 4
 ```
 
-and access characters in the string by index (offset from beginning – first index is 0) using []:
+and access characters in the string by index (offset from beginning – first index is 0) using `[]`:
 
 ```Python
 >>> i[1]

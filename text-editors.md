@@ -44,7 +44,7 @@ We suggest that you also:
 
 ### Customizing Sublime Text
 
-TODO: exapand
+In Sublime Text's application menu, select the Preferences menu, then click Settings - User. An editor tabe will open with a blank JSON dictionary (curly braces). Replace the empy dictionary with the following and save with File -> Save, or Ctrl-S (Cmd-S on OS X).
 
 ```sh
 {
