@@ -28,23 +28,47 @@ All values have types. Python can tell you the type of a value with the built-in
 <class 'str'>
 ```
 
-Types determine which operations are available on values. For example, exponentiation is defined for numbers (like int or float) but not for str (string) values.
+# The Meaning of Types
+
+Types determine which operations are available on values. For example, exponentiation is defined for numbers (like int or float):
 
 ```Python
 >>> 2**3
 8
+```
+
+... but not for `str` (string) values:
+
+```Python
 >>> "pie"**3
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
 ```
 
+# Python is Dynamically Typed
+
+Python is dynamically typed, meaning that types are not resoved until run-time. This means two things practically:
+
+1. Values have types, variables don't:
+
+```Python
+>> a = 1
+>>> type(a)
+<class 'int'>
+>>> a = 1.1 # This would not be allowed in a statically typed language
+>>> type(a)
+<class 'float'>
+```
+
+2. Python doesn't report type errors until run-time. We'll see many examples of this fact.
+
 # Overloaded Operators
 
 Some operators are overloaded, meaning they have different meanings when applied to different types. For example, + means addition for numbers and concatenation for strings:
 
 ```python
->>> 2+2
+>>> 2 + 2
 4
 >>> "Yo" + "lo!"
 'Yolo!'

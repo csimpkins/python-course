@@ -9,7 +9,10 @@ The old-style (2.X) string format operator, %, takes a string with format specif
 ’6 Easy Pieces of 3.140000’
 ```
 
-Here are the conversion rules:
+Conversion rules on next slide ...
+
+
+# Old-style (2.X) Conversion Rules
 
 - `%s` string
 - `%d` decimal integer
@@ -33,6 +36,8 @@ Georgia Tech 21
          USC  7
 ```
 
+# Alignment with `%`
+
 Fields right-aligned by default. Left-align with - in front of field width:
 
 ```Python
@@ -54,7 +59,7 @@ Notice that the field width indludes the decimal point and output is left-padded
 
 # String Interpolation with `format()`
 
-New-style (3.X) interpolation is done with the string method `format`:
+New-style (3.X) interpolation uses the string method `format`:
 
 ```Python
 >>> "{} {} {} {} {}".format(6, ’Easy’, ’Pieces’, ’of’, 3.14)
@@ -67,6 +72,8 @@ Old-style formats only resolve arguments by position. New-style formats can take
 >>> "{4} {3} {2} {1} {0}".format(6, ’Easy’, ’Pieces’, ’of’, 3.14)
 ’3.14 of Pieces Easy 6’
 ```
+
+# Arguments to `format()`
 
 Can also use named arguments, like functions:
 
@@ -102,8 +109,9 @@ Georgia Tech  21
 USC            7
 ```
 
-You can also unpack the tuple to supply its elements as individual
-arguments to format (or any function) by prepending tuple with * :
+# Sequence Unpacking
+
+Recall that `sunbowl2012` is a list of tuples. You can unpack the tuple to supply its elements as individual arguments to format (or any function) by prepending tuple with * :
 
 ```Python
 >>> for team in sunbowl2012:

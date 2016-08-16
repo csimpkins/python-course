@@ -61,7 +61,7 @@ Practically speaking, Python is a program on your computer that interprets Pytho
 
 # Hello, Python
 
-Since the publication of Kernighan and Ritchie's "The C Programming Language" it's been customary for one's first program in a new language to be "Hello, world!"
+Since Kernighan and Ritchie's "The C Programming Language" it's customary for your first program in a new language to be "Hello, world!"
 
 - Open your text editor, paste the following code into a buffer (or tab or window or whatever your editor calls it), and save it as `hello.py`:
 
@@ -79,11 +79,11 @@ Since the publication of Kernighan and Ritchie's "The C Programming Language" it
 
 # Interpreting Python Programs
 
-What happened when we entered `python3 hello.py` at an operating system command shell prompt?
+What happens when we enter `python3 hello.py` at an operating system command shell prompt?
 
-1. `python3` told the operating system to load the python interpreter into memory and run it. `python3` is the name of an executable file on your hard disk which your OS can find because its directory is on the PATH
-2. We invoked `python3` with a *command line argument*, which `python3` reads after it starts running
-3. Since the command line argument was the name of a file (`hello.py`), the `python3` program treated the file as a Python program, or script, and read the file line by line, executing the Python statements in the file
+1. `python3` tells the OS to load the Python interpreter into memory and run it. `python3` is the name of an executable file on your hard disk which your OS can find because its directory is on the `PATH`
+2. We invoke `python3` with a *command line argument*, which `python3` reads after it starts running
+3. Since the command line argument was the name of a file (`hello.py`), the `python3` loads the file named by the argument and executes the Python code in it.
 
 A Python program, or script, is just a sequence of Python statements and expressions.
 
@@ -101,6 +101,6 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 `>>>` is the command prompt for the Python REPL.
 
-- The Python interactive shell is also called a REPL, for Read Eval Print Loop, becuase it runs the following loop: **R**ead an expression or statement at the command prompt, **E**valuate the expression or execute the statement, and **P**rint the result to the console
+- REPL stands for **R**ead **E**val **P**rint **L**oop -- **R**ead an expression or statement at the command prompt, **E**valuate the expression or execute the statement, **P**rint the result to the console, **L**oop back to **R**ead step
 
 We’ll spend a lot of time in the REPL.
