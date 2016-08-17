@@ -8,8 +8,8 @@ Python code organized in
 - packages, and
 - scripts.
 
-We’ve already used some modules, now we’ll learn what they are, how
-they’re orgainized in packages, and how to write Python programs that
+We've already used some modules, now we'll learn what they are, how
+they're orgainized in packages, and how to write Python programs that
 can be run on their own, not just entered in the Python command shell.
 
 # Modules
@@ -72,7 +72,7 @@ Here we import the math module into one function.
 >>> math.sqrt(64)
 Traceback (most recent call last):
 File "<stdin>", line 1, in <module>
-NameError: name ’math’ is not defined
+NameError: name 'math' is not defined
 ```
 
 # Importing Names from a Module
@@ -86,7 +86,7 @@ You can import only certain names from a module:
 >>> floor(1.2)
 Traceback (most recent call last):
 File "<stdin>", line 1, in <module>
-NameError: name ’floor’ is not defined
+NameError: name 'floor' is not defined
 ```
 
 Or all names from a module:
@@ -101,7 +101,7 @@ Or all names from a module:
 1.0
 ```
 
-Notice that with this syntax you don’t have to use a fully-qualified
+Notice that with this syntax you don't have to use a fully-qualified
 name, e.g., module.name
 
 # Module Search Path
@@ -155,7 +155,7 @@ Take a look at the drawing.py file. Notice the if statement at the bottom:
 
 ```Python
 # is this the main (top-level) module?
-if __name__ == ’__main__’:
+if __name__ == '__main__':
     `stand()
     head()
     body()
@@ -164,10 +164,10 @@ if __name__ == ’__main__’:
     leftleg()
     rightleg()
     # Pause so the user can see the drawing before exiting.
-    input(’Press any key to exit.’)
+    input('Press any key to exit.')
 ```
 
-This makes the module a runnable Python program. It’s similar to the main function or method from some other programming languages. With it we can import the file as a module to use its functions (or objects or variables), or run it from the command line.
+This makes the module a runnable Python program. It's similar to the main function or method from some other programming languages. With it we can import the file as a module to use its functions (or objects or variables), or run it from the command line.
 
 # Shebang!
 
@@ -192,22 +192,22 @@ The input() function Python reads all the characters typed into the console unti
 >>> x = input()
 abcdefg1234567
 >>> x
-’abcdefg1234567’
+'abcdefg1234567'
 ```
 
 We can also supply a prompt for the user:
 
 ```Python
->>> input(’Give me a number: ’)
+>>> input('Give me a number: ')
 Give me a number: 3
-’3’
+'3'
 ```
 
 And remember, input() returns a string that may need to be coverted.
 
 ```Python
->>> 2 * int(input("Give me a number and I’ll double it: "))
-Give me a number and I’ll double it: 3
+>>> 2 * int(input("Give me a number and I'll double it: "))
+Give me a number and I'll double it: 3
 6
 ```
 
@@ -215,27 +215,32 @@ Give me a number and I’ll double it: 3
 
 ![](Argument_Clinic.png)
 
+```Python
+$ python args.py one 2 two + one
+```
 
+The `python` invocation above contains 6 command line arguments.
 
 # Command-line Arguments in Python
 
 When you run a Python program, Python collects the arguments to the
 program in a variable called sys.argv. Given a Python program
-(arguments.py):
+(`arguments.py`):
+
+```Python
 #!/usr/bin/env python3
 import sys
 
 if len(sys.argv) < 2:
-print("You’ve given me nothing to work with.")
+print("You've given me nothing to work with.")
 else:
 print(sys.argv[1] +"? Well I disagree!")
 $ ./arguments.py Pickles
 Pickles? Well I disagree!
 [chris@lawn-128-61-62-82 ~/work/vcs/github/data-python/code]
 $ ./arguments.py
-You’ve given me nothing to work with.
-
-
+You've given me nothing to work with.
+```
 
 # Conclusion
 

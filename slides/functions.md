@@ -33,21 +33,15 @@ Hello
 
 The general form of a function definition is
 
-`def` *function_name(parameter_list):*
-    *function_body*
+```Python
+def <function_name>(<parameter_list>):
+    <function_body>
+```
 
 - The first line is called the header.
 - *function_name* is the name you use to call the function.
 - *parameter_list* is a list of parameters to the function, which may be empty.
 - *function_body* is a sequence of expressions and statements.
-
-Our say_hello() function has an empty parameter list and a body of only one statement:
-
-```Python
->>> def say_hello():
-...     print('Hello')
-...
-```
 
 # Function Parameters
 
@@ -316,7 +310,7 @@ If we want a different sort order, we can define a function that extracts the pa
 
 # Lambda Functions
 
-The `by_gpa` function is pretty simple. Instead of defining a named function, we can define it inline with a lambda function:
+The `by_gpa` function is pretty simple. Instead of defining a named function, we can define it inline with an anonymous function, a.k.a., a *lambda function*:
 
 ```Python
 >>> pp.pprint(sorted(studs, key=lambda t: t[1]))
@@ -324,4 +318,8 @@ The `by_gpa` function is pretty simple. Instead of defining a named function, we
  ('Cartman', 2.4, 'CmpE'),
  ('Stan', 2.5, 'ISyE'),
  ('Kenny', 4.0, 'ME')]
- ```
+```
+
+The general form is `lambda <parameter_list>: <expression>`
+
+The body of a lambda function is limited to a single expression, which is implicitly returned.

@@ -5,8 +5,8 @@
 The old-style (2.X) string format operator, %, takes a string with format specifiers on the left, and a single value or tuple of values on the right, and substitutes the values into the string according to the conversion rules in the format specifiers. For example:
 
 ```Python
->>> "%d %s %s %s %f" % (6, ’Easy’, ’Pieces’, ’of’, 3.14)
-’6 Easy Pieces of 3.140000’
+>>> "%d %s %s %s %f" % (6, 'Easy', 'Pieces', 'of', 3.14)
+'6 Easy Pieces of 3.140000'
 ```
 
 Conversion rules on next slide ...
@@ -28,9 +28,9 @@ Conversion rules on next slide ...
 Specify field widths with a number between % and conversion rule:
 
 ```Python
->>> sunbowl2012 = [(’Georgia Tech’, 21), (’USC’, 7)]
+>>> sunbowl2012 = [('Georgia Tech', 21), ('USC', 7)]
 >>> for team in sunbowl2012:
-...     print(’%14s %2d’ % team)
+...     print('%14s %2d' % team)
 ...
 Georgia Tech 21
          USC  7
@@ -42,7 +42,7 @@ Fields right-aligned by default. Left-align with - in front of field width:
 
 ```Python
 >>> for team in sunbowl2012:
-...     print(’%-14s %2d’ % team)
+...     print('%-14s %2d' % team)
 ...
 Georgia Tech   21
 USC             7
@@ -51,8 +51,8 @@ USC             7
 Specify n significant digits for floats with a .n after the field width:
 
 ```Python
->>> ’%5.2f’ % math.pi
-’ 3.14’
+>>> '%5.2f' % math.pi
+' 3.14'
 ```
 
 Notice that the field width indludes the decimal point and output is left-padded with spaces.
@@ -62,15 +62,15 @@ Notice that the field width indludes the decimal point and output is left-padded
 New-style (3.X) interpolation uses the string method `format`:
 
 ```Python
->>> "{} {} {} {} {}".format(6, ’Easy’, ’Pieces’, ’of’, 3.14)
-’6 Easy Pieces of 3.14’
+>>> "{} {} {} {} {}".format(6, 'Easy', 'Pieces', 'of', 3.14)
+'6 Easy Pieces of 3.14'
 ```
 
 Old-style formats only resolve arguments by position. New-style formats can take values from any position by putting the position number in the `{}` (Notice that positions start with 0):
 
 ```Python
->>> "{4} {3} {2} {1} {0}".format(6, ’Easy’, ’Pieces’, ’of’, 3.14)
-’3.14 of Pieces Easy 6’
+>>> "{4} {3} {2} {1} {0}".format(6, 'Easy', 'Pieces', 'of', 3.14)
+'3.14 of Pieces Easy 6'
 ```
 
 # Arguments to `format()`
@@ -78,16 +78,16 @@ Old-style formats only resolve arguments by position. New-style formats can take
 Can also use named arguments, like functions:
 
 ```Python
->>> "{count} pieces of {kind} pie".format(kind=’punkin’, count=3)
-’3 pieces of punkin pie’
+>>> "{count} pieces of {kind} pie".format(kind='punkin', count=3)
+'3 pieces of punkin pie'
 ```
 
-Or dictionaries (note that there’s one dict argument, number 0):
+Or dictionaries (note that there's one dict argument, number 0):
 
 ```Python
->>> "{0[count]} pieces of {0[kind]} pie".format({’kind’:’punkin’,
-’count’:3})
-’3 pieces of punkin pie’
+>>> "{0[count]} pieces of {0[kind]} pie".format({'kind':'punkin',
+'count':3})
+'3 pieces of punkin pie'
 ```
 
 # String Formatting with `format()`
@@ -95,15 +95,15 @@ Or dictionaries (note that there’s one dict argument, number 0):
 Conversion types appear after a colon:
 
 ```Python
->>> "{:d} {} {} {} {:f}".format(6, ’Easy’, ’Pieces’, ’of’, 3.14)
-’6 Easy Pieces of 3.140000’
+>>> "{:d} {} {} {} {:f}".format(6, 'Easy', 'Pieces', 'of', 3.14)
+'6 Easy Pieces of 3.140000'
 ```
 
 Argument names can appear before the :, and field formatters appear between the : and the conversion specifier (note the < and > for left and right alignment):
 
 ```Python
 >>> for team in sunbowl2012:
-...     print(’{:<14s} {:>2d}’.format(team[0], team[1]))
+...     print('{:<14s} {:>2d}'.format(team[0], team[1]))
 ...
 Georgia Tech  21
 USC            7
@@ -115,7 +115,7 @@ Recall that `sunbowl2012` is a list of tuples. You can unpack the tuple to suppl
 
 ```Python
 >>> for team in sunbowl2012:
-...     print(’{:<14s} {:>2d}’.format(*team))
+...     print('{:<14s} {:>2d}'.format(*team))
 ...
 Georgia Tech  21
 USC            7
@@ -127,23 +127,23 @@ USC            7
 `substr` in `str`
 
 ```Python
->>> ’foobar’.find(’o’)
+>>> 'foobar'.find('o')
 1
 ```
 
 `str.replace(old, new)` returns a copy of str with all occurrences of `old` replaced with `new`
 
 ```Python
->>> ’foobar’.replace(’bar’, ’fighter’)
-’foofighter’
+>>> 'foobar'.replace('bar', 'fighter')
+'foofighter'
 ```
 
 `str.split(delimiter)` returns a list of substrings from `str`
 delimited by `delimiter`
 
 ```Python
->>> ’foobar’.split(’ob’)
-[’fo’, ’ar’]
+>>> 'foobar'.split('ob')
+['fo', 'ar']
 ```
 
 # Useful String Methods (2 of 4)
@@ -152,22 +152,22 @@ delimited by `delimiter`
 all the elements of `iterable` with str in in between each element
 
 ```Python
->>> ’ob’.join([’fo’, ’ar’])
-’foobar’
+>>> 'ob'.join(['fo', 'ar'])
+'foobar'
 ```
 `str.strip()` returns a copy of `str` with leading and trailing
 whitespace removed
 
 ```Python
 >>> ' landing   '.strip()
-’landing’
+'landing'
 ```
 
 `str.rstrip()` returns a copy of `str` with only trailing whitespace removed
 
 ```Python
 >>> ' landing   '.rstrip()
-’ landing’
+' landing'
 ```
 
 # Useful String Methods (3 of 4)
@@ -175,23 +175,23 @@ whitespace removed
 `str.rjust(width)` returns a copy of str that is `width` characters or `len(str)` in length, whichever is greater, padded with leading spaces as necessary
 
 ```Python
->>> ’rewards’.rjust(20)
-’             rewards’
+>>> 'rewards'.rjust(20)
+'             rewards'
 ```
 
 `str.upper()` returns a copy of `str` with each character converted to upper case.
 
 ```Python
->>> ’CamelCase’.upper()
-’CAMELCASE’
+>>> 'CamelCase'.upper()
+'CAMELCASE'
 ```
 
 `str.isupper()` returns `True` if `str` is all upper case
 
 ```Python
->>> ’CamelCase’.isupper()
+>>> 'CamelCase'.isupper()
 False
->>> ’CAMELCASE’.isupper()
+>>> 'CAMELCASE'.isupper()
 True
 ```
 
@@ -200,22 +200,22 @@ True
 `str.isdigit()` returns `True` if `str` is all digits
 
 ```Python
->>> ’42’.isdigit()
+>>> '42'.isdigit()
 True
->>> ’99 bottles of beer’.isdigit()
+>>> '99 bottles of beer'.isdigit()
 False
 ```
 
 `str.startswith(substr_or_tuple)` returns `True` if `str` starts with `substr_or_tuple`
 
 ```Python
->>> ’a bang! a whimper’.startswith(’a bang’)
+>>> 'a bang! a whimper'.startswith('a bang')
 True
 ```
 
 `str.endswith(substr_or_tuple)` returns `True` if `str` ends with `substr_or_tuple`
 
 ```Python
->>> ’bang! a whimper’.endswith(’a whimper’)
+>>> 'bang! a whimper'.endswith('a whimper')
 True
 ```

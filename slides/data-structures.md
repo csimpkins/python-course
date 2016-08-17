@@ -19,7 +19,7 @@ A list is an indexed sequence of Python objects.
 - Create a list with square brackets
 
 ```Python
->>> boys = [’Stan’, ’Kyle’, ’Cartman’, ’Kenny’]
+>>> boys = ['Stan', 'Kyle', 'Cartman', 'Kenny']
 ```
 
 - Create an empty list with empty square brackets or `list()` function
@@ -33,23 +33,23 @@ A list is an indexed sequence of Python objects.
 can mix element types
 
 ```Python
->>> mixed = [1, ’Two’, 3.14]
+>>> mixed = [1, 'Two', 3.14]
 >>> type(mixed[0])
-<class ’int’>
+<class 'int'>
 >>> type(mixed[1])
-<class ’str’>
+<class 'str'>
 >>> type(mixed[2])
-<class ’float’>
+<class 'float'>
 ```
 
 # Creating Lists from Strings
 
-- Create a list from a string with str’s split() function:
+- Create a list from a string with str's split() function:
 
 ```Python
 >>> grades_line = "90, 85, 92, 100"
 >>> grades_line.split()
-[’90,’, ’85,’, ’92,’, ’100’]
+['90,', '85,', '92,', '100']
 ```
 
 - By default `split()` uses whitespace to delimit
@@ -57,18 +57,18 @@ elements. To use a different delimiter, pass as argument to
 `split()`:
 
 ```Python
->>> grades_line.split(’,’)
-[’90’, ’ 85’, ’ 92’, ’ 100’]
+>>> grades_line.split(',')
+['90', ' 85', ' 92', ' 100']
 ```
 
 - The `list()` function converts any iterable object (like sequences)
 to a list. Remember that strings are sequences of characters:
 
 ```Python
->>> list(’abcdefghijklmnopqrstuvwxyz’)
-[’a’, ’b’, ’c’, ’d’, ’e’, ’f’, ’g’, ’h’, ’i’, ’j’, ’k’, ’l’, ’m’,
-’n’, ’o’, ’p’, ’q’, ’r’, ’s’, ’t’, ’u’, ’v’, ’w’, ’x’, ’y’,
-’z’]
+>>> list('abcdefghijklmnopqrstuvwxyz')
+['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
+'z']
 ```
 
 # Accessing List Elements
@@ -78,25 +78,25 @@ Individual list elements are accessed by index.
 - First element at index 0
 
 ```Python
->>> boys = [’Stan’, ’Kyle’, ’Cartman’, ’Kenny’]
+>>> boys = ['Stan', 'Kyle', 'Cartman', 'Kenny']
 >>> boys[0]
-’Stan’
+'Stan'
 ```
 
 - Negative indexes offset from the end of the list backwards
 
 ```Python
 >>> boys[-1]
-’Kenny’
+'Kenny'
 ```
 
 - Lists are mutable, meaning you can add, delete, and modify
 elements
 
 ```Python
->>> boys[2] = ’Eric’
+>>> boys[2] = 'Eric'
 >>> boys
-[’Stan’, ’Kyle’, ’Eric’, ’Kenny’]
+['Stan', 'Kyle', 'Eric', 'Kenny']
 ```
 
 # List Operators
@@ -106,21 +106,21 @@ not:
 
 ```Python
 >>> boys
-[’Stan’, ’Kyle’, ’Cartman’, ’Kenny’]
->>> ’Kyle’ in boys
+['Stan', 'Kyle', 'Cartman', 'Kenny']
+>>> 'Kyle' in boys
 True
->>> ’Kyle’ not in boys
+>>> 'Kyle' not in boys
 False
 ```
 
-- The + operator concatenates two lists (note ’Butters’ in list):
+- The + operator concatenates two lists (note 'Butters' in list):
 
 ```Python
->>> boys + [’Butters’]
-[’Stan’, ’Kyle’, ’Cartman’, ’Kenny’, ’Butters’]
+>>> boys + ['Butters']
+['Stan', 'Kyle', 'Cartman', 'Kenny', 'Butters']
 The * operator repeats a list to produce a new list:
->>> [’Ni’] * 5
-[’Ni’, ’Ni’, ’Ni’, ’Ni’, ’Ni’]
+>>> ['Ni'] * 5
+['Ni', 'Ni', 'Ni', 'Ni', 'Ni']
 ```
 
 # Functions on Lists
@@ -132,7 +132,7 @@ generally, the sequence `s`)
 
 ```Python
 >>> boys
-[’Stan’, ’Kyle’, ’Cartman’, ’Kenny’]
+['Stan', 'Kyle', 'Cartman', 'Kenny']
 >>> len(boys)
 4
 ```
@@ -142,11 +142,11 @@ greatest
 
 ```Python
 >>> min(boys)
-’Cartman’
+'Cartman'
 >>> min([8, 6, 7, 5, 3, 0, 9])
 0
 >>> max(boys)
-’Stan’
+'Stan'
 ```
 
 # The `del` Statement
@@ -157,9 +157,9 @@ The `del` statement deletes variables.
 indexing into the list with square brackets.
 
 ```Python
->>> boys = [’Stan’, ’Kyle’, ’Cartman’, ’Kenny’]
+>>> boys = ['Stan', 'Kyle', 'Cartman', 'Kenny']
 >>> boys[3]
-’Kenny’
+'Kenny'
 ```
 
 - Like any variable, a list element can be deleted with `del`
@@ -167,7 +167,7 @@ indexing into the list with square brackets.
 ```Python
 >>> del boys[3]
 >>> boys
-[’Stan’, ’Kyle’, ’Cartman’] # You killed Kenny!
+['Stan', 'Kyle', 'Cartman'] # You killed Kenny!
 ```
 
 - A list variable is a variable, so you can delete the whole list
@@ -177,7 +177,7 @@ indexing into the list with square brackets.
 >>> boys
 Traceback (most recent call last):
 File "<stdin>", line 1, in <module>
-NameError: name ’boys’ is not defined
+NameError: name 'boys' is not defined
 ```
 
 # List Methods
@@ -187,23 +187,23 @@ Methods are invoked on an object (an instance of a class) by appending a dot, `.
 - `s.count(x)`: number of occurences of `x` in the sequence `s`
 
 ```Python
->>> surfin_bird = "Bird bird bird b-bird’s the word".split()
+>>> surfin_bird = "Bird bird bird b-bird's the word".split()
 >>> surfin_bird
-[’Bird’, ’bird’, ’bird’, "b-bird’s", ’the’, ’word’]
->>> surfin_bird.count(’bird’)
+['Bird', 'bird', 'bird', "b-bird's", 'the', 'word']
+>>> surfin_bird.count('bird')
 2
 ```
 
 - `s.append(x)` adds the single element `x` to the end of `s`
 
 ```Python
->>> boys.append(’Butters’)
+>>> boys.append('Butters')
 >>> boys
-[’Stan’, ’Kyle’, ’Cartman’, ’Kenny’, ’Butters’]
+['Stan', 'Kyle', 'Cartman', 'Kenny', 'Butters']
 s.extend(t) adds the elements of t to the end of s
->>> boys.extend([’Tweak’, ’Jimmy’])
+>>> boys.extend(['Tweak', 'Jimmy'])
 >>> boys
-[’Stan’, ’Kyle’, ’Cartman’, ’Kenny’, ’Butters’, ’Tweak’, ’Jimmy’]
+['Stan', 'Kyle', 'Cartman', 'Kenny', 'Butters', 'Tweak', 'Jimmy']
 ```
 
 # List Methods
@@ -212,10 +212,10 @@ s.extend(t) adds the elements of t to the end of s
 `ValueError` if `x` is not in `s`
 
 ```Python
->>> boys.remove(’Kenny’)
+>>> boys.remove('Kenny')
 >>> boys
-[’Stan’, ’Kyle’, ’Cartman’, ’Butters’, ’Tweak’, ’Jimmy’]
->>> boys.remove(’Professor Chaos’)
+['Stan', 'Kyle', 'Cartman', 'Butters', 'Tweak', 'Jimmy']
+>>> boys.remove('Professor Chaos')
 Traceback (most recent call last):
 File "<stdin>", line 1, in <module>
 ValueError: list.remove(x): x not in list
@@ -225,37 +225,37 @@ ValueError: list.remove(x): x not in list
 
 ```Python
 >>> boys.pop()
-’Jimmy’
+'Jimmy'
 >>> boys
-[’Stan’, ’Kyle’, ’Cartman’, ’Butters’, ’Tweak’]
+['Stan', 'Kyle', 'Cartman', 'Butters', 'Tweak']
 ```
 
 # Slicing
 
-Slicing lists works just like slicing strings (they’re both sequences)
+Slicing lists works just like slicing strings (they're both sequences)
 
 - Take the first two elements:
 
 ```Python
->>> boys = [’Stan’, ’Kyle’, ’Cartman’, ’Butters’, ’Tweak’]
+>>> boys = ['Stan', 'Kyle', 'Cartman', 'Butters', 'Tweak']
 >>> boys[0:2]
-[’Stan’, ’Kyle’]
+['Stan', 'Kyle']
 ```
 
 - Take every second element, starting with the first:
 
 ```Python
 >>> boys[::2]
-[’Stan’, ’Cartman’, ’Tweak’]
+['Stan', 'Cartman', 'Tweak']
 >>> boys[0:5:2] # same as above
-[’Stan’, ’Cartman’, ’Tweak’]
+['Stan', 'Cartman', 'Tweak']
 ```
 
 - Take the second from the end:
 
 ```Python
 >>> boys[-2]
-’Butters’
+'Butters'
 ```
 
 Note that slice operations return new lists.
@@ -269,9 +269,9 @@ Aliasing occurs when two or more variables reference the same object
 ```Python
 >>> brats = boys
 >>> boys
-[’Stan’, ’Kyle’, ’Cartman’, ’Butters’, ’Tweak’]
+['Stan', 'Kyle', 'Cartman', 'Butters', 'Tweak']
 >>> brats
-[’Stan’, ’Kyle’, ’Cartman’, ’Butters’, ’Tweak’]
+['Stan', 'Kyle', 'Cartman', 'Butters', 'Tweak']
 ```
 
 Now boys and brats are aliases.
@@ -280,11 +280,11 @@ Now boys and brats are aliases.
 the same object
 
 ```Python
->>> brats.append(’Timmy’)
+>>> brats.append('Timmy')
 >>> brats
-[’Stan’, ’Kyle’, ’Cartman’, ’Butters’, ’Tweak’, ’Timmy’]
+['Stan', 'Kyle', 'Cartman', 'Butters', 'Tweak', 'Timmy']
 >>> boys
-[’Stan’, ’Kyle’, ’Cartman’, ’Butters’, ’Tweak’, ’Timmy’]
+['Stan', 'Kyle', 'Cartman', 'Butters', 'Tweak', 'Timmy']
 ```
 
 # Copies
@@ -292,20 +292,20 @@ the same object
 Operators create copies
 
 ```Python
->>> brats + [’Bebe’, ’Wendy’]
-[’Stan’, ’Kyle’, ’Cartman’, ’Butters’, ’Tweak’, ’Timmy’, ’Bebe’,
-’Wendy’]
+>>> brats + ['Bebe', 'Wendy']
+['Stan', 'Kyle', 'Cartman', 'Butters', 'Tweak', 'Timmy', 'Bebe',
+'Wendy']
 >>> brats
-[’Stan’, ’Kyle’, ’Cartman’, ’Butters’, ’Tweak’, ’Timmy’]
+['Stan', 'Kyle', 'Cartman', 'Butters', 'Tweak', 'Timmy']
 ```
 
 You have to reassign to the list to make an update:
 
 ```Python
->>> brats = brats + [’Bebe’, ’Wendy’] # could also use shortcut +=
+>>> brats = brats + ['Bebe', 'Wendy'] # could also use shortcut +=
 >>> brats
-[’Stan’, ’Kyle’, ’Cartman’, ’Butters’, ’Tweak’, ’Timmy’, ’Bebe’,
-’Wendy’]
+['Stan', 'Kyle', 'Cartman', 'Butters', 'Tweak', 'Timmy', 'Bebe',
+'Wendy']
 ```
 
 Notice that after the reassignment, `brats` is no longer an alias of
@@ -313,7 +313,7 @@ Notice that after the reassignment, `brats` is no longer an alias of
 
 ```Python
 >>> boys
-[’Stan’, ’Kyle’, ’Cartman’, ’Butters’, ’Tweak’, ’Timmy’]
+['Stan', 'Kyle', 'Cartman', 'Butters', 'Tweak', 'Timmy']
 ```
 
 # Slicing Creates Copies (Usually)
@@ -323,40 +323,40 @@ Notice that after the reassignment, `brats` is no longer an alias of
 ```Python
 >>> first_two = boys[:2]
 >>> first_two
-[’Stan’, ’Kyle’]
->>> first_two[0] = ’Stan the man’
+['Stan', 'Kyle']
+>>> first_two[0] = 'Stan the man'
 >>> first_two
-[’Stan the man’, ’Kyle’]
+['Stan the man', 'Kyle']
 >>> boys
-[’Stan’, ’Kyle’, ’Cartman’, ’Butters’, ’Tweak’, ’Timmy’]
+['Stan', 'Kyle', 'Cartman', 'Butters', 'Tweak', 'Timmy']
 ```
 
 - Slices on the left hand side allow for flexible assignment
 
 ```Python
->>> boys[0:2] = [’Randy’, ’Sharon’, ’Gerald’, ’Sheila’]
+>>> boys[0:2] = ['Randy', 'Sharon', 'Gerald', 'Sheila']
 >>> boys
-[’Randy’, ’Sharon’, ’Gerald’, ’Sheila’, ’Cartman’, ’Butters’,
-’Tweak’, ’Timmy’]
+['Randy', 'Sharon', 'Gerald', 'Sheila', 'Cartman', 'Butters',
+'Tweak', 'Timmy']
 ```
 
 # A Few More List Operations
 
-You can combine the elements of a list to form a string with `str`’s
+You can combine the elements of a list to form a string with `str`'s
 `join()` method.
 
 ```Python
->>> aretha = [’R’, ’E’, ’S’, ’P’, ’E’, ’C’, ’T’]
+>>> aretha = ['R', 'E', 'S', 'P', 'E', 'C', 'T']
 >>> "-".join(aretha)
-’R-E-S-P-E-C-T’
+'R-E-S-P-E-C-T'
 ```
 `sorted()` function returns a new list
 
 ```Python
 >>> sorted(aretha)
-[’C’, ’E’, ’E’, ’P’, ’R’, ’S’, ’T’]
+['C', 'E', 'E', 'P', 'R', 'S', 'T']
 >>> aretha # Notice original is unchanged
-[’R’, ’E’, ’S’, ’P’, ’E’, ’C’, ’T’]
+['R', 'E', 'S', 'P', 'E', 'C', 'T']
 ```
 
 `sort()` method modifies the list it is invoked on
@@ -364,7 +364,7 @@ You can combine the elements of a list to form a string with `str`’s
 ```Python
 >>> aretha.sort()
 >>> aretha
-[’C’, ’E’, ’E’, ’P’, ’R’, ’S’, ’T’]
+['C', 'E', 'E', 'P', 'R', 'S', 'T']
 ```
 
 # Example: Grades
@@ -372,9 +372,9 @@ You can combine the elements of a list to form a string with `str`’s
 Start with a list representing a line from a gradebook file
 
 ```Python
->>> grades_line = [’Chris’, 100, 90, 95]
+>>> grades_line = ['Chris', 100, 90, 95]
 >>> grades_line
-[’Chris’, 100, 90, 95]
+['Chris', 100, 90, 95]
 ```
 
 Get the sublist containing just the grades by slicing
@@ -385,7 +385,7 @@ Get the sublist containing just the grades by slicing
 [100, 90, 95]
 ```
 
-Sum the grades using Python’s built-in `sum()` function
+Sum the grades using Python's built-in `sum()` function
 
 ```Python
 >>> sum(grades)
@@ -441,18 +441,18 @@ Create dictionaries with `{}`
 Add key-value pairs with assignment operator
 
 ```Python
->>> capitals[’Georgia’] = ’Atlanta’
->>> capitals[’Alabama’] = ’Montgomery’
+>>> capitals['Georgia'] = 'Atlanta'
+>>> capitals['Alabama'] = 'Montgomery'
 >>> capitals
-{’Georgia’: ’Altanta’, ’Alabama’: ’Montgomery’}
+{'Georgia': 'Altanta', 'Alabama': 'Montgomery'}
 ```
 
 Keys are unique, so assignment to same key updates mapping
 
 ```Python
->>> capitals[’Alabama’] = ’Birmingham’
+>>> capitals['Alabama'] = 'Birmingham'
 >>> capitals
-{’Georgia’: ’Altanta’, ’Alabama’: ’Birmingham’}
+{'Georgia': 'Altanta', 'Alabama': 'Birmingham'}
 ```
 
 # Dictionary Operations
@@ -460,17 +460,17 @@ Keys are unique, so assignment to same key updates mapping
 Remove a key-value mapping with `del` statement
 
 ```Python
->>> del capitals[’Alabama’]
+>>> del capitals['Alabama']
 >>> capitals
-{’Georgia’: ’Atlanta’}
+{'Georgia': 'Atlanta'}
 ```
 
 Use the `in` operator to test for existence of key (not value)
 
 ```Python
->>> ’Georgia’ in capitals
+>>> 'Georgia' in capitals
 True
->>> ’Atlanta’ in capitals
+>>> 'Atlanta' in capitals
 False
 ```
 
@@ -478,10 +478,10 @@ Extend a dictionary with `update()` method, get values as a list
 with values method
 
 ```Python
->>> capitals.update({’Tennessee’: ’Nashville’, ’Mississippi’:
-’Jackson’})
+>>> capitals.update({'Tennessee': 'Nashville', 'Mississippi':
+'Jackson'})
 >>> capitals.values()
-dict_values([’Jackson’, ’Nashville’, ’Atlanta’])
+dict_values(['Jackson', 'Nashville', 'Atlanta'])
 ```
 
 # Conversions to `dict`
@@ -499,16 +499,16 @@ A list of two-element tuples:
 
 
 ```Python
->>> dict([(’Lassie’, ’Collie’), (’Rin Tin Tin’, ’German
-Shepherd’)])
-{’Rin Tin Tin’: ’German Shepherd’, ’Lassie’: ’Collie’}
+>>> dict([('Lassie', 'Collie'), ('Rin Tin Tin', 'German
+Shepherd')])
+{'Rin Tin Tin': 'German Shepherd', 'Lassie': 'Collie'}
 ```
 
 Even a list of two-character strings:
 
 ```Python
->>> dict([’a1’, ’a2’, ’b3’, ’b4’])
-{’b’: ’4’, ’a’: ’2’}
+>>> dict(['a1', 'a2', 'b3', 'b4'])
+{'b': '4', 'a': '2'}
 ```
 
 Notice that subsequent pairs overwrote previously set keys.
@@ -516,18 +516,18 @@ Notice that subsequent pairs overwrote previously set keys.
 # Sets
 
 Sets have no duplicates, like the keys of a `dict`. They can be iterated
-over (we’ll learn that later) but can’t be accessed by index.
+over (we'll learn that later) but can't be accessed by index.
 
 - Create an empty set with `set()` function, add elements with `add()` method
 
 ```Python
 >>> names = set()
->>> names.add(’Ally’)
->>> names.add(’Sally’)
->>> names.add(’Mally’)
->>> names.add(’Ally’)
+>>> names.add('Ally')
+>>> names.add('Sally')
+>>> names.add('Mally')
+>>> names.add('Ally')
 >>> names
-{’Ally’, ’Mally’, ’Sally’}
+{'Ally', 'Mally', 'Sally'}
 ```
 
 - Converting to set a convenient way to remove duplicates
@@ -615,4 +615,4 @@ Typical Python programs make extensive use of built-in data structures and often
 
 
 This is a small taste of the expressive power and syntactic
-convenience of Python’s data structures.
+convenience of Python's data structures.

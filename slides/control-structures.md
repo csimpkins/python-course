@@ -8,7 +8,7 @@ Any algorithm can be expressed by:
 - Selection - conditional execution (not conditional jumping)
 - Repetition - loops
 
-We’ve already seen sequences of statements. Today we’ll learn
+We've already seen sequences of statements. Today we'll learn
 selection (conditional execution), and repetition.
 
 # Binary Values
@@ -95,14 +95,14 @@ Example:
 if (num % 2) == 0:
 print("I like " + str(num))
 else:
-print("I’m ambivalent about " + str(num))
+print("I'm ambivalent about " + str(num))
 ```
 
 # Blocks
 
 Python is block-structured. Contiguous sequences of statements at the
 same indentation level form a block. Blocks are like single statements
-(not expressions - they don’t have values).
+(not expressions - they don't have values).
 
 ```
 if (num % 2) == 0:
@@ -110,7 +110,7 @@ if (num % 2) == 0:
    print("I like even numbers.")
 else:
     print(str(num) + " is odd.");
-    print("I’m ambivalent about odd numbers.")
+    print("I'm ambivalent about odd numbers.")
 ```
 
 # Multi-way `if-else` Statements
@@ -141,7 +141,7 @@ else:
 
 # Short-Circuit Evaluation
 
-Here’s a common idiom for testing an operand before using it:
+Here's a common idiom for testing an operand before using it:
 
 ```Python
 if (kids != 0) and ((pieces / kids) >= 2):
@@ -184,7 +184,7 @@ Example
 ...         print(n)
 ...         n -= 1
 ...
-print(’Blast off!’)
+print('Blast off!')
 ...
 >>> countdown(5)
 5
@@ -204,18 +204,18 @@ Blast off!
 In the for loop:
 
 ```Python
->>> animal = ’Peacock’
->>> for animal in [’Giraffe’, ’Alligator’, ’Liger’]:
+>>> animal = 'Peacock'
+>>> for animal in ['Giraffe', 'Alligator', 'Liger']:
 ...     print(animal)
 ...
 Giraffe
 Alligator
 Liger
 >>> animal
-’Liger’
+'Liger'
 ```
 
-- `animal` is assigned to each element of the iterable list of animals in successive executions of the `for` loop’s body
+- `animal` is assigned to each element of the iterable list of animals in successive executions of the `for` loop's body
 - notice that the loop variable re-assigned an existing variable
 
 # `break` and `else`
@@ -228,17 +228,17 @@ executing a `break` (weird - don't ever write code with `for`-`else`)
 >>> def sweet_animals(animals):
 ...     for animal in animals:
 ...         print(animal)
-...         if animal == ’Liger’:
-...             print(’Mad drawing skillz!’)
+...         if animal == 'Liger':
+...             print('Mad drawing skillz!')
 ...             break
 ...     else:
-...         print(’No animals of note.’)
+...         print('No animals of note.')
 ...
->>> sweet_animals([’Peacock’, ’Liger’, ’Alligator’])
+>>> sweet_animals(['Peacock', 'Liger', 'Alligator'])
 Peacock
 Liger
 Mad drawing skillz!
->>> sweet_animals([’Peacock’, ’Tiger’, ’Alligator’])
+>>> sweet_animals(['Peacock', 'Tiger', 'Alligator'])
 Peacock
 Tiger
 Alligator
@@ -266,13 +266,13 @@ which could otherwise be done with loops.
 
 # Run-time Errors
 
-An error detected during execution is called an exception and is represented at runtime by an exception object. The Python interpreter raises an exception at the point an error occurs. The exception is handled by some exception-handling code. Here we don’t handle the ValueError ourselves, so it’s handled by the Python shell:
+An error detected during execution is called an exception and is represented at runtime by an exception object. The Python interpreter raises an exception at the point an error occurs. The exception is handled by some exception-handling code. Here we don't handle the ValueError ourselves, so it's handled by the Python shell:
 
 ```Python
->>> int(’e’)
+>>> int('e')
 Traceback (most recent call last):
 File "<stdin>", line 1, in <module>
-ValueError: invalid literal for int() with base 10: ’e’
+ValueError: invalid literal for int() with base 10: 'e'
 ```
 
 We can handle an exception by enclosing potentially error-raising code
@@ -294,13 +294,13 @@ exception.
 >>> def get_number_from_user():
 ...     input_is_invalid = True
 ...     while input_is_invalid:
-...         num = input(’Please enter a whole number: ’)
+...         num = input('Please enter a whole number: ')
 ...         try:
 ...             num = int(num)
-...             # Won’t get here if exception is raised. ’
+...             # Won't get here if exception is raised. '
 ...             input_is_invalid = False
 ...         except ValueError:
-...             print(num + ’ is not a whole number. Try again.’)
+...             print(num + ' is not a whole number. Try again.')
 ...    return num
 ...
 >>> get_number_from_user()
