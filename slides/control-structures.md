@@ -288,7 +288,7 @@ except ExceptionType:
 `ExceptionType` is optional. If left off, except clause will catch any
 exception.
 
-# Exception Hnadling Example
+# Exception Handling Example
 
 ```Python
 >>> def get_number_from_user():
@@ -310,4 +310,4 @@ Please enter a whole number: 3
 3
 ```
 
-For more information, see https://docs.python.org/3/tutorial/errors.html
+For more information, see [https://docs.python.org/3/tutorial/errors.html](https://docs.python.org/3/tutorial/errors.html)

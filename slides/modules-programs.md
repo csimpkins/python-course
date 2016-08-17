@@ -156,7 +156,7 @@ Take a look at the drawing.py file. Notice the if statement at the bottom:
 ```Python
 # is this the main (top-level) module?
 if __name__ == '__main__':
-    `stand()
+    stand()
     head()
     body()
     leftarm()
@@ -203,7 +203,7 @@ Give me a number: 3
 '3'
 ```
 
-And remember, input() returns a string that may need to be coverted.
+And remember, input() returns a string that may need to be converted.
 
 ```Python
 >>> 2 * int(input("Give me a number and I'll double it: "))
@@ -232,9 +232,12 @@ program in a variable called sys.argv. Given a Python program
 import sys
 
 if len(sys.argv) < 2:
-print("You've given me nothing to work with.")
+    print("You've given me nothing to work with.")
 else:
-print(sys.argv[1] +"? Well I disagree!")
+    print(sys.argv[1] +"? Well I disagree!")
+```
+
+```Python
 $ ./arguments.py Pickles
 Pickles? Well I disagree!
 [chris@lawn-128-61-62-82 ~/work/vcs/github/data-python/code]
