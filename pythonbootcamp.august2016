@@ -29,12 +29,12 @@ Day 3: 2016-08-17
 Hour 1; control-structures
 Hour 1.5; Exercise: <a href="exercises/grades.py">grades.py</a>
 Hour 2; modules-programs
-Hour 3; Exercise: <a href="execises/hangman.html">Hangman</a>
+Hour 3; Exercise: <a href="exercises/hangman.html">Hangman</a>
 Day 4: 2016-08-18
-Hour 1; classes-objects
-Hour 2; ipython-notebooks
+Hour 1; Exercise: <a href="exercises/hangman.html">Hangman</a>
+Hour 2; classes-objects
 Hour 3; functools
 Day 5: 2016-08-19
-Hour 1; file-io, csv-files
-Hour 2; regular-expressions
-Hour 3; web-services
+Hour 1; file-io
+Hour 2; csv-files
+Hour 3; Exercise: <a href="exercises/tides.html">Tides</a>
