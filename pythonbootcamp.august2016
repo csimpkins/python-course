@@ -32,9 +32,10 @@ Hour 2; modules-programs
 Hour 3; Exercise: <a href="exercises/hangman.html">Hangman</a>
 Day 4: 2016-08-18
 Hour 1; Exercise: <a href="exercises/hangman.html">Hangman</a>
-Hour 2; classes-objects
+Hour 2; classes-objects; <a href="code/oop">OOP Code</a>
 Hour 3; functools
 Day 5: 2016-08-19
-Hour 1; file-io
+Hour 1; Exercise: <a href="exercises/schedule.html">Schedule</a>
 Hour 2; csv-files
 Hour 3; Exercise: <a href="exercises/tides.html">Tides</a>
+END_SCHEDULE
